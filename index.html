@@ -8,6 +8,9 @@
   <title>Train Schedule</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
 
 </head>
 
@@ -32,51 +35,50 @@
     first train time(HH:mm - military time)
     frequency -->
 
-    <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Train Name</th>
-            <th scope="col">Destination</th>
-            <th scope="col">Frequency(min)</th>
-            <th scope="col">Next Arrival</th>
-            <th scope="col">Minutes Away</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td >Polar Express</td>
-            <td>North Pole</td>
-            <td>20</td>
-            <td>5:35 pm</td>
-            <td>10</td>
-          </tr>
-        </tbody>
-      </table>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Train Name</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Frequency(min)</th>
+        <th scope="col">Next Arrival</th>
+        <th scope="col">Minutes Away</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Polar Express</td>
+        <td>North Pole</td>
+        <td>20</td>
+        <td>5:35 pm</td>
+        <td>10</td>
+      </tr>
+    </tbody>
+  </table>
 
 
-      <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Train Name</label>
-            <input type="text" class="form-control" id="data-train-name" placeholder="Polar Express">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Destination</label>
-            <input type="text" class="form-control" id="data-destination" placeholder="Naperthrill">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">First Train Time</label>
-            <input type="text" class="form-control" id="data-first-train" placeholder="HH:mm(military time)">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Frequency (min)</label>
-            <input type="text" class="form-control" id="data-frequency" placeholder="60">
-          </div>
-         
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Train Name</label>
+      <input type="text" class="form-control" id="data-train-name" placeholder="Polar Express">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Destination</label>
+      <input type="text" class="form-control" id="data-destination" placeholder="Naperthrill">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Train Time</label>
+      <input type="text" class="form-control" id="data-first-train" placeholder="HH:mm(military time)">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Frequency (min)</label>
+      <input type="text" class="form-control" id="data-frequency" placeholder="60">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
  
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript"></script>
   <script src="app.js"></script>
 </body>
