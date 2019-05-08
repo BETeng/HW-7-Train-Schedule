@@ -48,8 +48,9 @@ database.ref().on('child_added', function (childSnapshot) {
   var freqCell = $('<td>').text(frequency);
 
 
-  var firstTrainTime = moment(firstTrain, 'hh:mm');
-  console.log(firstTrainTime)
+  var firstTrainTime = moment(firstTrain, 'HH:mm')
+  .subtract(1, "days");
+  console.log('firstTrainTime',firstTrainTime)
 
   var now = moment().format('HH:mm');
   console.log('now', now)
@@ -64,7 +65,7 @@ database.ref().on('child_added', function (childSnapshot) {
   var minCell = $('<td>').text(minutesAway);
   console.log('minutesAway', minutesAway);
 
-  var nextArrival = moment().add(minutesAway, 'minutes').format('HH:mm');
+  var nextArrival = moment().add(minutesAway, 'minutes').format('LT');
   console.log(nextArrival);
   var nextCell = $('<td>').text(nextArrival);
 
